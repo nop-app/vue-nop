@@ -1,0 +1,27 @@
+{
+  "name": "@nop-app/vue-nop",
+  "version": "2.0.0",
+  "description": "Vue plugin for Nop",
+  "keywords": [
+    "nop",
+    "vue-nop",
+    "vue"
+  ],
+  "main": "dist/vue-nop.js",
+  "repository": "https://github.com/nop-app/vue-nop.git",
+  "author": "Danilo Polani <danilo.polani@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npx mix --production",
+    "dev": "npx mix"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.19",
+    "postcss": "^8.3.1",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3"
+  }
+}
