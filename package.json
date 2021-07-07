@@ -1,6 +1,6 @@
 {
   "name": "@nop-app/vue-nop",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Vue plugin for Nop",
   "keywords": [
     "nop",
