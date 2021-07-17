@@ -3,7 +3,7 @@ import config from './config';
 let latestEvaluatedRoute = null;
 
 export default function () {
-  if (!config.router || config.enabledRoutes.length === 0) {
+  if (config.settings.enabled === false || !config.router || config.enabledRoutes.length === 0) {
     return;
   }
 

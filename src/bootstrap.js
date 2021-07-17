@@ -12,11 +12,13 @@ export default function () {
     script.onload = function () {
       config.$vue.prototype.$nop = config.$vue.$nop = window.Nop;
 
+      const disabledBySettings = config.settings.enabled === false;
+
       // Init SDK
       window.Nop.init({
         ...config.settings,
-        // Enable only if enabledRoutes = ['*']
-        enabled: config.router !== null && config.enabledRoutes.length === 1 && config.enabledRoutes[0] === '*',
+        // Enable only if enabledRoutes = ['*'] and has not been disabled by user
+        enabled: disabledBySettings ? false : config.router !== null && config.enabledRoutes.length === 1 && config.enabledRoutes[0] === '*',
       });
 
       listen();
